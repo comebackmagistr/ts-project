@@ -14,13 +14,13 @@ export const LangSwitcher = ({className}: LangSwitcherProps) => {
         i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
     }
 
- return (
-         <Button 
-         className={classNames(cls.LangSwitcher, {}, [className])}
-         theme={ThemeButton.CLEAR} 
-         onClick={toggle}
-         >
+    return (
+        <Button 
+            className={classNames(cls.LangSwitcher, {}, [className])}
+            theme={ThemeButton.CLEAR} 
+            onClick={toggle}
+        >
             {t('Язык')}
         </Button>
- );
+    );
 };
