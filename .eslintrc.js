@@ -42,10 +42,24 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         "no-undef": 0,
-        'i18next/no-literal-string': ['error', {markupOnly: true}],
+        'i18next/no-literal-string': [
+            'error', {
+                markupOnly: true, 
+                'ignoreAttribute': ["data-testid"]
+            }
+        ],
+        'no-dupe-keys': 'off',
     },
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
 
